@@ -1,0 +1,74 @@
+Function: main/0
+Constants: None, 5
+Locals: respuesta
+Globals: pascal, print
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     1
+          CALL_FUNCTION                  1
+          STORE_FAST                     0
+          LOAD_GLOBAL                    1
+          LOAD_FAST                      0
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
+Function: pascal/1
+Constants: None, 1
+Locals: NIVEL, base, iterador_SUBIR_nivel, nuevo, iterador_CREAR_nivel    
+Globals: range, len, append
+BEGIN
+          LOAD_CONST                     1
+          BUILD_LIST                     1
+          STORE_FAST                     1
+          SETUP_LOOP               label05
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_CONST                     1
+          BINARY_SUBTRACT
+          CALL_FUNCTION                  1
+          GET_ITER
+label00:  FOR_ITER                 label04
+          STORE_FAST                     2
+          LOAD_CONST                     1
+          BUILD_LIST                     1
+          STORE_FAST                     3
+          SETUP_LOOP               label03
+          LOAD_GLOBAL                    0
+          LOAD_GLOBAL                    1
+          LOAD_FAST                      1
+          CALL_FUNCTION                  1
+          LOAD_CONST                     1
+          BINARY_SUBTRACT
+          CALL_FUNCTION                  1
+          GET_ITER
+label01:  FOR_ITER                 label02
+          STORE_FAST                     4
+          LOAD_FAST                      3
+          LOAD_ATTR                      2
+          LOAD_FAST                      1
+          LOAD_FAST                      4
+          BINARY_SUBSCR
+          LOAD_FAST                      1
+          LOAD_FAST                      4
+          LOAD_CONST                     1
+          BINARY_ADD
+          BINARY_SUBSCR
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          JUMP_ABSOLUTE            label01
+label02:  POP_BLOCK
+label03:  LOAD_FAST                      3
+          LOAD_ATTR                      2
+          LOAD_CONST                     1
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_FAST                      3
+          STORE_FAST                     1
+          JUMP_ABSOLUTE            label00
+label04:  POP_BLOCK
+label05:  LOAD_FAST                      1
+          RETURN_VALUE
+END

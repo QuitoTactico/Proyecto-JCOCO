@@ -1,0 +1,83 @@
+Function: main/0
+Constants: None, 3, 4
+Globals: sumar, restar, multip, divi
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          POP_TOP
+          LOAD_GLOBAL                    1
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          POP_TOP
+          LOAD_GLOBAL                    2
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          POP_TOP
+          LOAD_GLOBAL                    3
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          CALL_FUNCTION                  2
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
+Function: sumar/2
+Constants: None
+Locals: a, b
+Globals: print
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
+Function: restar/2
+Constants: None
+Locals: a, b
+Globals: print
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_SUBTRACT
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
+Function: multip/2
+Constants: None
+Locals: a, b
+Globals: print
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_MULTIPLY
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
+Function: divi/2
+Constants: None
+Locals: a, b
+Globals: print
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_TRUE_DIVIDE
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
