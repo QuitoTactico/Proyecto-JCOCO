@@ -7,4 +7,4 @@ class Pascal{
             _numero = numero;
         }
         void setPascal(int _numero);
-}
+};
