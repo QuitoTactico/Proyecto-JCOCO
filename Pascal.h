@@ -1,12 +1,10 @@
-//
-// Created by esteb on 6/04/2022.
-//
-
-#ifndef PRÁCTICA_L_DE_PROGRAMACIÓN_PASCAL_H
-#define PRÁCTICA_L_DE_PROGRAMACIÓN_PASCAL_H
-
-
-
-
-
-#endif //PRÁCTICA_L_DE_PROGRAMACIÓN_PASCAL_H
+//by Lau :D
+class Pascal{
+    private:
+        int numero;
+    public:
+        Pascal(int _numero){
+            _numero = numero;
+        }
+        void setPascal(int _numero);
+}
