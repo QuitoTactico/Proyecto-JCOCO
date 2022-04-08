@@ -1,4 +1,4 @@
-#inclide "Pascal.h"
+#include "Pascal.h"
 
 void Pascal::setPascal(int pascal){
     numero = pascal;
