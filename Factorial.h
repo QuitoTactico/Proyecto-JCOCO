@@ -7,4 +7,4 @@ class Factorial{
             _numero = numero;
         }
         void setFactorial(int _numero);
-}
+};
