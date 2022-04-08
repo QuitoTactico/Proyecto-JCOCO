@@ -1,10 +1,13 @@
 // Hola profe, Laura lo saluda :D
 #include <iostream>
-#include "Main.h"
+#include "Calculadora.h"
+#include "Cmatrices.h"
+#include "Factorial.h"
+#include "Pascal.h"
 using namespace std;
 
 int menu(){
-    int opcion;
+    int opcion, numero, numero1, numero2;
     do{
         cout<<"========================"<<endl;
         cout<<"1. Triángulo de Pascal"<<endl;
@@ -14,32 +17,38 @@ int menu(){
         cout<<"5. Salir"<<endl;
         cout<<"Por favor digite su opción"<<endl;
         cin >> opcion;
-        //¿Por qué C++ es tan raro? auxilio
+        //¿Por qué C++ es tan raro? auxilio,alguienmatemeporfavor
         switch (opcion){
             case 1:
-                /* code */
+                cout<<"Digíte el numero: "<<endl;cin>>numero;
+                Pascal pascal1(numero); pascal1.setPascal(numero);
                 break;
             case 2:
-                /* code */
+                cout<<"Digíte el numero: "<<endl;cin>>numero;
+                Factorial factorial1(numero); factorial1.setFactorial(numero);
                 break;
             case 3:
-                /* code */
+                cout<<"Digíte el primer numero: "<<endl;cin>>numero1; 
+                cout<<"Digíte el primer numero: "<<endl;cin>>numero2;
+                Calculadora calculadora1();
                 break;
             case 4:
-                /* code */
+                cout<<"Digíte el primer numero: "<<endl;cin>>numero1;
+                cout<<"Digíte el primer numero: "<<endl;cin>>numero2;
+                Cmatrices matrices();
                 break;
             default:
-
+                cout<<"¡Adiós! Vuelve pronto."<<endl;
+                cout<<"[Sistema Cerrado]"<<endl;
                 break;
         }
     } while(opcion!=5); 
 }   
 int main(){
-    /*try{
+    try{
         menu();
     } catch(const char *msg){
 
     }
-    */
    return 0;
 }
