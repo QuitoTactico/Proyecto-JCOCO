@@ -1,5 +1,5 @@
 # Proyecto_Lenguajes
-Proyecto para Lenguajes de Programación - (Interfaz / 4 funciones / JCoCo)  \n
+Proyecto para Lenguajes de Programación - (Interfaz / 4 funciones / JCoCo)
 Hecho por: -Esteban Vergara Giraldo
-           -Laura Danniela Záratwe Guerrero
+           -Laura Danniela Zárate Guerrero
            -Santiago Arias Higuita
