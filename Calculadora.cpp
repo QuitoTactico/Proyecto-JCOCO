@@ -1,3 +1,4 @@
+//made by laura
 #include "Calculadora.h"
 
 void Calculadora::setNumeros(int n1,int n2){
