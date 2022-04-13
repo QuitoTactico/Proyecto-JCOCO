@@ -1,4 +1,4 @@
-//bruh, this is easy 
+//this is easy 
 class Cmatrices{
     private:
         int numero1;
