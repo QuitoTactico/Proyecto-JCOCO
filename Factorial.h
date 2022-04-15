@@ -1,4 +1,4 @@
-//by Lau :D
+//by Lau
 class Factorial{
     private:
         int numero;
