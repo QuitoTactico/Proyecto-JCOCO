@@ -1,10 +1,17 @@
-//by Lau
+//by Lau :D and Quito c:
+
+#ifndef C___FACTORIAL_H
+#define C___FACTORIAL_H
+
 class Factorial{
     private:
         int numero;
     public:
-        Factorial(int _numero){
-            _numero = numero;
-        }
-        void setFactorial(int _numero);
+        int generarArchivo();
+        int ejecutarArchivo();
+        int imprimirArchivo();
+
+        Factorial(int _numero);
 };
+
+#endif //C___FACTORIAL_H

@@ -1,10 +1,17 @@
-//by Lau
+//by Lau :D and Quito c:
+
+#ifndef C___PASCAL_H
+#define C___PASCAL_H
+
 class Pascal{
     private:
         int numero;
     public:
-        Pascal(int _numero){
-            _numero = numero;
-        }
-        void setPascal(int _numero);
+        int generarArchivo();
+        int ejecutarArchivo();
+        int imprimirArchivo();
+
+        Pascal(int _numero);
 };
+
+#endif //C___PASCAL_H
