@@ -1,0 +1,310 @@
+Function: main/0
+Locals: m1, m2
+Globals: Matriz, setAllValores, imprimirResultados, operacion
+BEGIN
+          LOAD_GLOBAL                    0
+          CALL_FUNCTION                  0
+          STORE_FAST                     0
+          LOAD_FAST                      0
+          LOAD_ATTR                      1
+          LOAD_CONST                     1
+          LOAD_CONST                     2
+          LOAD_CONST                     3
+          LOAD_CONST                     4
+          CALL_FUNCTION                  4
+          POP_TOP
+          LOAD_GLOBAL                    0
+          CALL_FUNCTION                  0
+          STORE_FAST                     1
+          LOAD_FAST                      1
+          LOAD_ATTR                      1
+          LOAD_CONST                     5
+          LOAD_CONST                     6
+          LOAD_CONST                     7
+          LOAD_CONST                     8
+          CALL_FUNCTION                  4
+          POP_TOP
+          LOAD_GLOBAL                    2
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          LOAD_GLOBAL                    3
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          LOAD_CONST                     9
+          CALL_FUNCTION                  3
+          LOAD_GLOBAL                    3
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          LOAD_CONST                    10
+          CALL_FUNCTION                  3
+          LOAD_GLOBAL                    3
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          LOAD_CONST                    11
+          CALL_FUNCTION                  3
+          LOAD_GLOBAL                    3
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          LOAD_CONST                    12
+          CALL_FUNCTION                  3
+          CALL_FUNCTION                  6
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
+Class: Matriz
+BEGIN
+    Function: setAllValores/5
+    Constants: None
+    Locals: self, a, b, c, d
+    Globals: matriz
+    BEGIN
+              LOAD_FAST                      1
+              LOAD_FAST                      2
+              BUILD_LIST                     2
+              LOAD_FAST                      3
+              LOAD_FAST                      4
+              BUILD_LIST                     2
+              BUILD_LIST                     2
+              LOAD_FAST                      0
+              STORE_ATTR                     0
+              LOAD_CONST                     0
+              RETURN_VALUE
+    END
+    Function: setValorIndividual/4
+    Constants: None
+    Locals: self, Y, X, num
+    Globals: matriz
+    BEGIN
+              LOAD_FAST                      3
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              LOAD_FAST                      1
+              BINARY_SUBSCR
+              LOAD_FAST                      2
+              STORE_SUBSCR
+              LOAD_CONST                     0
+              RETURN_VALUE
+    END
+    Function: setAllValoresCero/1
+    Constants: None, 2, 0
+    Locals: self, iteradorCerosLevel
+    Globals: range, matriz, append
+    BEGIN
+              SETUP_LOOP               label02
+              LOAD_GLOBAL                    0
+              LOAD_CONST                     1
+              CALL_FUNCTION                  1
+              GET_ITER
+    label00:  FOR_ITER                 label01
+              STORE_FAST                     1
+              LOAD_FAST                      0
+              LOAD_ATTR                      1
+              LOAD_ATTR                      2
+              LOAD_CONST                     2
+              BUILD_LIST                     1
+              LOAD_CONST                     1
+              BINARY_MULTIPLY
+              CALL_FUNCTION                  1
+              POP_TOP
+              JUMP_ABSOLUTE            label00
+    label01:  POP_BLOCK
+    label02:  LOAD_CONST                     0
+              RETURN_VALUE
+    END
+    Function: getDimension/1
+    Constants: None
+    Locals: self
+    Globals: dimension
+    BEGIN
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              RETURN_VALUE
+    END
+    Function: getMatriz/1
+    Constants: None
+    Locals: self
+    Globals: matriz
+    BEGIN
+              LOAD_FAST                      0
+              LOAD_ATTR                      0
+              RETURN_VALUE
+    END
+    Function: __init__/1
+    Constants: None, 2
+    Locals: self
+    Globals: matriz, dimension
+    BEGIN
+              BUILD_LIST                     0
+              LOAD_FAST                      0
+              STORE_ATTR                     0
+              LOAD_CONST                     1
+              LOAD_FAST                      0
+              STORE_ATTR                     1
+              LOAD_CONST                     0
+              RETURN_VALUE
+    END
+END
+Function: operacion/3
+Constants: None, 1, 2, 3, 4
+Locals: matriz1, matriz2, operando, M1, M2, dimension, matriz, iterAlto, iterAncho, a, b, c
+Globals: getMatriz, getDimension, Matriz, setAllValoresCero, range, int, setValorIndividual, str
+BEGIN
+          LOAD_FAST                      0
+          LOAD_ATTR                      0
+          CALL_FUNCTION                  0
+          STORE_FAST                     3
+          LOAD_FAST                      1
+          LOAD_ATTR                      0
+          CALL_FUNCTION                  0
+          STORE_FAST                     4
+          LOAD_FAST                      0
+          LOAD_ATTR                      1
+          CALL_FUNCTION                  0
+          STORE_FAST                     5
+          LOAD_GLOBAL                    2
+          CALL_FUNCTION                  0
+          STORE_FAST                     6
+          LOAD_FAST                      6
+          LOAD_ATTR                      3
+          CALL_FUNCTION                  0
+          POP_TOP
+          SETUP_LOOP               label09
+          LOAD_GLOBAL                    4
+          LOAD_FAST                      5
+          CALL_FUNCTION                  1
+          GET_ITER
+label00:  FOR_ITER                 label08
+          STORE_FAST                     7
+          SETUP_LOOP               label07
+          LOAD_GLOBAL                    4
+          LOAD_FAST                      5
+          CALL_FUNCTION                  1
+          GET_ITER
+label01:  FOR_ITER                 label06
+          STORE_FAST                     8
+          LOAD_GLOBAL                    5
+          LOAD_FAST                      3
+          LOAD_FAST                      7
+          BINARY_SUBSCR
+          LOAD_FAST                      8
+          BINARY_SUBSCR
+          CALL_FUNCTION                  1
+          STORE_FAST                     9
+          LOAD_GLOBAL                    5
+          LOAD_FAST                      4
+          LOAD_FAST                      7
+          BINARY_SUBSCR
+          LOAD_FAST                      8
+          BINARY_SUBSCR
+          CALL_FUNCTION                  1
+          STORE_FAST                    10
+          LOAD_FAST                      2
+          LOAD_CONST                     1
+          COMPARE_OP                     2
+          POP_JUMP_IF_FALSE        label02
+          LOAD_FAST                      9
+          LOAD_FAST                     10
+          BINARY_ADD
+          STORE_FAST                    11
+          JUMP_FORWARD             label02
+label02:  LOAD_FAST                      2
+          LOAD_CONST                     2
+          COMPARE_OP                     2
+          POP_JUMP_IF_FALSE        label03
+          LOAD_FAST                      9
+          LOAD_FAST                     10
+          BINARY_SUBTRACT
+          STORE_FAST                    11
+          JUMP_FORWARD             label03
+label03:  LOAD_FAST                      2
+          LOAD_CONST                     3
+          COMPARE_OP                     2
+          POP_JUMP_IF_FALSE        label04
+          LOAD_FAST                      9
+          LOAD_FAST                     10
+          BINARY_MULTIPLY
+          STORE_FAST                    11
+          JUMP_FORWARD             label04
+label04:  LOAD_FAST                      2
+          LOAD_CONST                     4
+          COMPARE_OP                     2
+          POP_JUMP_IF_FALSE        label05
+          LOAD_FAST                      9
+          LOAD_FAST                     10
+          BINARY_TRUE_DIVIDE
+          STORE_FAST                    11
+          JUMP_FORWARD             label05
+label05:  LOAD_FAST                      6
+          LOAD_ATTR                      6
+          LOAD_FAST                      7
+          LOAD_FAST                      8
+          LOAD_FAST                     11
+          CALL_FUNCTION                  3
+          POP_TOP
+          JUMP_ABSOLUTE            label01
+label06:  POP_BLOCK
+label07:  JUMP_ABSOLUTE            label00
+label08:  POP_BLOCK
+label09:  LOAD_GLOBAL                    7
+          LOAD_FAST                      6
+          LOAD_ATTR                      0
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          RETURN_VALUE
+END
+Function: imprimirResultados/6
+Constants: None, "(Matriz 1)  ", "(Matriz 2)  ", "
+", "-Suma:      ", "-Resta:     ", "-Multip:    ", "-Divi:      "
+Locals: m1, m2, suma, resta, multip, divi
+Globals: print, str, getMatriz
+BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     1
+          LOAD_GLOBAL                    1
+          LOAD_FAST                      0
+          LOAD_ATTR                      2
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     2
+          LOAD_GLOBAL                    1
+          LOAD_FAST                      1
+          LOAD_ATTR                      2
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          BINARY_ADD
+          LOAD_CONST                     3
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     4
+          LOAD_FAST                      2
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     5
+          LOAD_FAST                      3
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     6
+          LOAD_FAST                      4
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     7
+          LOAD_FAST                      5
+          BINARY_ADD
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_CONST                     0
+          RETURN_VALUE
+END
