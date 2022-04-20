@@ -2,11 +2,11 @@
 // Y tmb Esteban, jajjsja
 // Santiago igual
 #include <stdio.h>
-#include <iostream>         // [ Máximos valores permitidos: ]
-#include "Pascal.cpp"       //               34
-#include "Factorial.cpp"    //               12
-#include "Calculadora.cpp"  //        n [+,-,*,/] m < 
-#include "Cmatrices.cpp"
+#include <iostream>         //       [ Máximos valores permitidos: ]
+#include "Pascal.cpp"       //                     34
+#include "Factorial.cpp"    //                     12
+#include "Calculadora.cpp"  //          n [+,-,*,/] m < 2147483647
+#include "Cmatrices.cpp"    //  m1[y][x] [+,-,*,/] m2[y][x]  <  2147483647
 using namespace std;
 /*
 cosas por hacer:    excepciones, pasar algunas cosas a: char ejemploString[100];   \n   cin >> ejemploString;
